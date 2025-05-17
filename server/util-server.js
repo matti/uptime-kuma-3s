@@ -176,7 +176,7 @@ exports.pingAsync = function (hostname, ipv6 = false, size = 56) {
  * @param {string} topic Topic name to produce into
  * @param {string} message Message to produce
  * @param {object} options Kafka client options. Contains ssl, clientId,
- * allowAutoTopicCreation and interval (interval defaults to 20,
+ * allowAutoTopicCreation and interval (interval defaults to 3,
  * allowAutoTopicCreation defaults to false, clientId defaults to
  * "Uptime-Kuma" and ssl defaults to false)
  * @param {SASLOptions} saslOptions Options for kafka client
@@ -185,7 +185,7 @@ exports.pingAsync = function (hostname, ipv6 = false, size = 56) {
  */
 exports.kafkaProducerAsync = function (brokers, topic, message, options = {}, saslOptions = {}) {
     return new Promise((resolve, reject) => {
-        const { interval = 20, allowAutoTopicCreation = false, ssl = false, clientId = "Uptime-Kuma" } = options;
+        const { interval = 3, allowAutoTopicCreation = false, ssl = false, clientId = "Uptime-Kuma" } = options;
 
         let connectedToKafka = false;
 

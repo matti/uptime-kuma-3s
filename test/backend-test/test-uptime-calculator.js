@@ -375,7 +375,7 @@ test("Worst case", async (t) => {
     let c = new UptimeCalculator();
     let up = 0;
     let down = 0;
-    let interval = 20;
+    let interval = 3;
 
     await t.test("Prepare data", async () => {
         UptimeCalculator.currentDate = dayjs.utc("2023-08-12 20:46:59");

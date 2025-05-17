@@ -23,7 +23,7 @@ async function testMqtt(mqttSuccessMessage, mqttCheckType, receivedMessage) {
         port: connectionString.split(":")[2],
         mqttUsername: null,
         mqttPassword: null,
-        interval: 20, // controls the timeout
+        interval: 3, // controls the timeout
         mqttSuccessMessage: mqttSuccessMessage, // for keywords
         expectedValue: mqttSuccessMessage, // for json-query
         mqttCheckType: mqttCheckType,

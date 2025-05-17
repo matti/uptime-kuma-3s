@@ -52,12 +52,12 @@ class MqttMonitorType extends MonitorType {
      * @param {string} hostname Hostname / address of machine to test
      * @param {string} topic MQTT topic
      * @param {object} options MQTT options. Contains port, username,
-     * password and interval (interval defaults to 20)
+     * password and interval (interval defaults to 3)
      * @returns {Promise<string>} Received MQTT message
      */
     mqttAsync(hostname, topic, options = {}) {
         return new Promise((resolve, reject) => {
-            const { port, username, password, interval = 20 } = options;
+            const { port, username, password, interval = 3 } = options;
 
             // Adds MQTT protocol to the hostname if not already present
             if (!/^(?:http|mqtt|ws)s?:\/\//.test(hostname)) {

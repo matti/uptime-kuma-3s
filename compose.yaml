@@ -1,6 +1,10 @@
 services:
   uptime-kuma:
-    image: louislam/uptime-kuma:1
+    image: mattipaksula/uptime-kuma:3s
+    build:
+      context: .
+      dockerfile: docker/dockerfile
+      target: release
     volumes:
       - ./data:/app/data
     ports:
